@@ -117,7 +117,6 @@ function Header() {
           </div>
         </div>
       )}
-
       <hr />
     </div>
   );
