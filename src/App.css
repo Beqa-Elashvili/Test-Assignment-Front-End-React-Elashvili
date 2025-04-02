@@ -234,6 +234,11 @@ hr {
   padding-bottom: 1.5rem;
   transition: color 0.3s ease;
 }
+.sideItem {
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
 
 .menuItem:hover {
   color: gray;
@@ -254,6 +259,18 @@ hr {
   transform: translateY(-20px);
   transition: opacity 0.4s ease, transform 0.4s ease, max-height 0.4s ease;
 }
+.sideChild {
+  display: block;
+  padding: 1rem;
+  width: 12rem;
+  margin-top: 1rem;
+  position: absolute;
+  background-color: #ffffff;
+  opacity: 0;
+  border: solid 0.01rem #e9e9e9;
+  transform: translateY(-20px);
+  transition: opacity 0.4s ease, transform 0.4s ease, max-height 0.4s ease;
+}
 .menuP {
   font-size: 0.8rem;
   font-weight: 400;
@@ -267,6 +284,13 @@ hr {
 .menuItem:hover + .menuChild,
 .menuChild:hover {
   visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.4s ease, transform 0.4s ease, max-height 0.4s ease;
+}
+
+.sideItem:hover + .sideChild,
+.sideChild:hover {
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.4s ease, transform 0.4s ease, max-height 0.4s ease;

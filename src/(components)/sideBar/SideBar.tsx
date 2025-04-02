@@ -29,12 +29,12 @@ function SideBar() {
       <div className="SidebarMenu">
         {Menu.map((item: MenuItem, index: number) => (
           <div key={index}>
-            <div className="menuItem" onClick={() => handleMenuClick(index)}>
+            <div className="sideItem" onClick={() => handleMenuClick(index)}>
               <h1 className="menuItemTitle">{item.name}</h1>
               <BiChevronDown />
             </div>
             {openMenuIndex === index && (
-              <div className="menuChild">
+              <div className="sideChild">
                 {Object.values(item.childrens).map((child, idx) => (
                   <div key={idx}>
                     <div className="child" key={idx}>
