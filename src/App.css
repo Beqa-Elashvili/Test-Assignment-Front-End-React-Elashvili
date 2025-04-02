@@ -21,12 +21,18 @@ hr {
 }
 
 .header {
-  width: 100%;
+  width: 72.5rem;
+  margin: 0 auto;
   margin-top: 1.81rem;
   margin-bottom: 1.81rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .header {
+    width: 100%;
+  }
 }
 .logo {
   margin: 0 auto;

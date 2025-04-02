@@ -2,7 +2,7 @@ import { useGlobalProvider } from "../../providers";
 import { useEffect, useRef, useState } from "react";
 import { Post } from "../../providers/globalContext";
 import { RiSidebarUnfoldFill } from "react-icons/ri";
-
+import useGetFilteredPosts from "../../hooks/useGetFilteredPosts";
 function Header() {
   const {
     Post,
@@ -13,23 +13,10 @@ function Header() {
     setIsSidebarOpen,
     isSidebarOpen,
   } = useGlobalProvider();
-  const [filteredPosts, setFilteredPosts] = useState<Post[]>([]);
-  const [value, setValue] = useState<string>("");
   const modalRef = useRef<HTMLDivElement>(null);
 
-  function getFilteredPosts() {
-    const filteredPosts = Post.filter(
-      (post) =>
-        post.title.toLowerCase().includes(value.toLowerCase()) ||
-        post.text.toLowerCase().includes(value.toLowerCase())
-    );
-    if (value === "") {
-      setFilteredPosts([]);
-      return;
-    }
-    setFilteredPosts(filteredPosts);
-    return filteredPosts;
-  }
+  const { getFilteredPosts, filteredPosts, value, setValue } =
+    useGetFilteredPosts();
 
   useEffect(() => {
     const timeOut = setTimeout(() => {
