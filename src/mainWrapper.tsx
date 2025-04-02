@@ -1,6 +1,6 @@
 import Header from "./(components)/Header.tsx/Header";
-import Menu from "./(components)/Header.tsx/Menu";
-import SideBar from "./(components)/Header.tsx/SideBar";
+import Menu from "./(components)/Menu/Menu";
+import SideBar from "./(components)/sideBar/SideBar";
 
 const MainWrapper = ({ children }: { children: React.ReactNode }) => {
   return (
