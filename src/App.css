@@ -317,6 +317,7 @@ hr {
 .mainWrapper {
   display: grid;
   justify-content: center;
+  align-items: start;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
 }
